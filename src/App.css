@@ -1,0 +1,211 @@
+/* Reset & base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: linear-gradient(120deg, #d3cce3, #e9e4f0);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+}
+
+/* Main container with blur */
+.main-wrapper {
+  width: 100%;
+  max-width: 900px;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+/* Heading */
+.app-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Grid for student info */
+.input-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Input styles */
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+/* Subject section */
+.subjects-section {
+  margin-top: 1rem;
+}
+
+.subject-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.subject-row input {
+  flex: 1;
+}
+
+/* Buttons */
+button {
+  padding: 0.6rem 1.5rem;
+  background-color: #5c6bc0;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #3f51b5;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .subject-row {
+    flex-direction: column;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+}
+/* Search Bar */
+.search-bar {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.search-bar input {
+  flex: 1;
+}
+
+/* Popup Styles */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  width: 90%;
+  max-width: 500px;
+}
+
+.popup-box h3 {
+  margin-bottom: 1rem;
+}
+
+.popup-box ul {
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+}
+/* Student List Section */
+.students-list {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ccc;
+}
+
+.students-list h3 {
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+/* Individual Student Card */
+.student-card {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-left: 4px solid #5c6bc0;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.student-card p {
+  margin: 0;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* Action buttons for each student */
+.student-card button {
+  margin-left: 0.5rem;
+  background-color: #ff7043;
+  font-size: 0.85rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 8px;
+}
+
+.student-card button:first-of-type {
+  background-color: #42a5f5;
+}
+
+.student-card button:hover {
+  opacity: 0.9;
+}
+
+/* Small device fix */
+@media (max-width: 500px) {
+  .student-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .student-card button {
+    width: 100%;
+  }
+}
